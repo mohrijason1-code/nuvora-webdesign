@@ -213,6 +213,7 @@ h2{font-size:clamp(1.65rem,1.1rem + 1.9vw,2.6rem);line-height:1.2}
 .extra{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 26px;border-radius:18px;background:var(--soft);box-shadow:inset 0 0 0 1px var(--line)}
 .extra b{display:block;font-size:1.05rem}
 .extra span{color:var(--muted);font-size:.85rem}
+.extra span a{color:var(--violet-soft);text-decoration:underline;text-underline-offset:3px}
 .extra .v{text-align:right;white-space:nowrap;font-weight:800;font-size:1.3rem}
 .extra .v small{display:block;font-weight:500;font-size:.75rem;color:var(--muted)}
 .soon{display:inline-block;padding:2px 9px;border-radius:999px;background:rgb(244 191 95 / .22);color:var(--violet-soft);font-size:.7rem;font-weight:700;letter-spacing:.04em}
@@ -418,7 +419,7 @@ footer.site{background:var(--black);padding:64px 0 36px}
       <article class="svc">
         <div class="media"><img src="assets/work/fullclean.webp" alt="" loading="lazy" width="720" height="1125" style="object-position:center 30%"></div>
         <div class="body"><small>04 · Shopify</small><h3>Onlineshops</h3><p>Shop-Vorlagen zum Selbst-Einrichten oder ein fertiger Shop, den ich für Sie aufsetze.</p>
-          <ul class="tags"><li>Vorlagen ab 39 €</li><li>Fertige Shops ab 129 € <span class="soon">bald</span></li><li>Individuelle Shops</li></ul>
+          <ul class="tags"><li>Vorlagen ab 39 €</li><li>Fertige Shops ab 49 €</li><li>Individuelle Shops</li></ul>
           <a class="more" href="https://nuvora-studio.com" rel="noopener">nuvora-studio.com <b>ab 39 €</b></a></div>
       </article>
     </div>
@@ -476,7 +477,7 @@ footer.site{background:var(--black);padding:64px 0 36px}
     <div class="extras">
       <div class="extra rv"><div><b>Hosting &amp; Pflege</b><span>Domain, SSL, Updates, Änderungen</span></div><div class="v num">ab 29 €<small>im Monat</small></div></div>
       <div class="extra rv"><div><b>Shop-Vorlage</b><span>Shopify, mit Anleitung</span></div><div class="v num">ab 39 €<small>sofort</small></div></div>
-      <div class="extra rv"><div><b>Fertiger Shop <span class="soon">bald</span></b><span>Warteliste auf nuvora-studio.com</span></div><div class="v num">ab 129 €<small>einmalig</small></div></div>
+      <div class="extra rv"><div><b>Fertiger Shop</b><span>Auf Anfrage: <a href="#anfrage" data-ph="whatsapp">WhatsApp</a> oder <a href="#anfrage" data-paket="Onlineshop">Anfrage-Formular</a></span></div><div class="v num">ab 49 €<small>einmalig</small></div></div>
     </div>
     <p class="tax">Endpreise. Als Kleinunternehmer nach § 19 UStG weise ich keine Umsatzsteuer aus.</p>
   </div>
@@ -523,7 +524,7 @@ footer.site{background:var(--black);padding:64px 0 36px}
       <details><summary>Muss ich die Texte selbst schreiben?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Nein. Sie erzählen mir in Stichpunkten, was Sie machen. Ich formuliere die Texte und Sie geben sie frei.</p></details>
       <details><summary>Was ist in Hosting &amp; Pflege drin?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Speicherplatz, Domain, SSL-Verschlüsselung, Updates und kleine Änderungen wie neue Öffnungszeiten oder Urlaubshinweise. Ab 29 € im Monat.</p></details>
       <details><summary>Arbeiten Sie nur in der Region?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Mein Sitz ist Burbach, mein Schwerpunkt sind Betriebe in Haiger, Dillenburg, Rennerod und Umgebung. Alles läuft aber auch per Telefon und Nachricht, also deutschlandweit.</p></details>
-      <details><summary>Kann ich auch online verkaufen?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Ja. Bei NUVORA gibt es Shopify-Vorlagen zum Selbst-Einrichten ab 39 € und bald fertige Shops ab 129 €. Größere Shops plane ich individuell mit Ihnen.</p></details>
+      <details><summary>Kann ich auch online verkaufen?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Ja. Bei NUVORA gibt es Shopify-Vorlagen zum Selbst-Einrichten ab 39 € und fertige Shops ab 49 €, die ich für Sie einrichte. Schreiben Sie mir dafür einfach per WhatsApp oder E-Mail. Größere Shops plane ich individuell mit Ihnen.</p></details>
     </div>
   </div>
 </section>
@@ -550,7 +551,7 @@ footer.site{background:var(--black);padding:64px 0 36px}
       <div class="fgrid">
         <div class="f"><label for="f-firma">Betrieb</label><input id="f-firma" name="firma" autocomplete="organization" placeholder="z. B. Kfz Müller"></div>
         <div class="f"><label for="f-ort">Ort</label><input id="f-ort" name="ort" autocomplete="address-level2" placeholder="z. B. Haiger"></div>
-        <div class="f w"><label for="f-paket">Interesse</label><select id="f-paket" name="paket"><option>Visitenkarte (ab 390 €)</option><option selected>Betrieb (ab 790 €)</option><option>Premium (ab 1.490 €)</option><option>Modernisierung meiner Website</option><option>Onlineshop</option><option>Weiß ich noch nicht</option></select></div>
+        <div class="f w"><label for="f-paket">Interesse</label><select id="f-paket" name="paket"><option>Visitenkarte (ab 390 €)</option><option selected>Betrieb (ab 790 €)</option><option>Premium (ab 1.490 €)</option><option>Modernisierung meiner Website</option><option>Onlineshop / fertiger Shop (ab 49 €)</option><option>Weiß ich noch nicht</option></select></div>
         <div class="f w"><label for="f-kontakt">Telefon oder E-Mail</label><input id="f-kontakt" name="kontakt" autocomplete="email" placeholder="So erreiche ich Sie"></div>
         <div class="f w"><label for="f-msg">Nachricht (optional)</label><textarea id="f-msg" name="nachricht" placeholder="Was soll auf die Seite? Gibt es schon eine Website?"></textarea></div>
       </div>
