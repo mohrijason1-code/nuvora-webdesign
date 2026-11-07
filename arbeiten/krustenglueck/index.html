@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krustenglück Backstube: Demo-Website Bäckerei | NUVORA Studio</title>
+<meta name="description" content="Demo von NUVORA Studio: Krustenglück Backstube (Bäckerei). Idee: Ofenplan live. Die Seite kennt die Uhrzeit.">
+<meta name="theme-color" content="#f5efe4">
+<link rel="canonical" href="https://web.nuvora-studio.com/arbeiten/krustenglueck/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Krustenglück Backstube: Demo-Website Bäckerei | NUVORA Studio">
+<meta property="og:description" content="Demo von NUVORA Studio: Krustenglück Backstube (Bäckerei). Idee: Ofenplan live. Die Seite kennt die Uhrzeit.">
+<meta property="og:image" content="https://web.nuvora-studio.com/assets/show/krustenglueck-p.webp">
+<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="96x96" href="/assets/brand/favicon-96.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+@font-face{font-family:"Bricolage";src:url(../../assets/fonts/bricolage-latin-wght.woff2) format("woff2");font-weight:200 800;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Bricolage";src:url(../../assets/fonts/bricolage-latin-ext-wght.woff2) format("woff2");font-weight:200 800;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+:root{--paper:#f5efe4;--paper-2:#ebe2d2;--card:#fffcf6;--ink:#17140f;--ink-2:#4f483d;--muted:#776e60;--line:#e1d6c3;--line-2:#cdbfa7;--gold:#f2b84b;--gold-hi:#f7c869;--gold-ink:#8a5d0e;--stage:#100e0b;--stage-line:#34302a;--font:"Bricolage","Segoe UI",system-ui,sans-serif;--gutter:clamp(16px,4vw,48px)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:16.5px;line-height:1.65;overflow-x:hidden}
+:focus-visible{outline:2.5px solid var(--gold-ink);outline-offset:3px;border-radius:6px}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{margin:0;font-weight:760;letter-spacing:-.03em;line-height:1.02}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:var(--gutter)}
+.top{position:sticky;top:0;z-index:20;background:rgb(245 239 228 / .92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:22px;height:70px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:auto}
+.logo svg{width:36px;height:36px}
+.logo .av{width:36px;height:36px;flex:none;display:block;border-radius:50%;box-shadow:0 0 0 1px rgb(233 184 102 / .55)}
+.logo b{display:block;font-weight:800;letter-spacing:.14em;font-size:.92rem;line-height:1}
+.logo small{display:block;font-weight:600;letter-spacing:.34em;font-size:.55rem;color:var(--muted);margin-top:4px}
+.top a.l{text-decoration:none;font-weight:550;font-size:.93rem;color:var(--ink-2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border-radius:999px;font:inherit;font-weight:650;font-size:.95rem;text-decoration:none;border:0;cursor:pointer}
+.btn svg{width:18px;height:18px}
+.btn-g{background:var(--gold);color:var(--ink)}.btn-g:hover{background:var(--gold-hi)}
+.btn-o{box-shadow:inset 0 0 0 1.5px var(--line-2);color:var(--ink)}.btn-o:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+@media (max-width:700px){.top a.l{display:none}.top .btn{min-height:44px;padding:0 16px;font-size:.88rem}}
+.crumb{margin:28px 0 0;font-size:.88rem;color:var(--muted)}
+.crumb a{color:var(--ink-2)}
+.head{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:24px 56px;align-items:end;margin:18px 0 clamp(26px,3vw,40px)}
+.head h1{font-size:clamp(2.6rem,1.2rem + 4.4vw,5rem);letter-spacing:-.045em}
+.idea{display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;padding:7px 14px;border-radius:999px;background:var(--ink);color:#fff;font-size:.85rem;font-weight:650}
+.idea i{width:9px;height:9px;border-radius:50%;background:var(--dot)}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:8px 20px;margin:0;font-size:.95rem}
+.facts dt{color:var(--muted)}.facts dd{margin:0;font-weight:600}
+.lead{font-size:clamp(1.08rem,1rem + .4vw,1.3rem);color:var(--ink-2);max-width:60ch;margin:0 0 clamp(28px,4vw,48px)}
+.stage{background:radial-gradient(80% 70% at 50% 35%,#2a2116 0%,var(--stage) 70%);border-radius:28px;padding:clamp(18px,3vw,40px) clamp(14px,3vw,40px) clamp(22px,3vw,40px)}
+.sc{position:relative;max-width:980px;margin:0 auto;padding-bottom:clamp(18px,2.6vw,32px)}
+.lap{width:84%;margin:0 auto;padding:clamp(5px,.8vw,10px);border-radius:clamp(12px,1.5vw,18px) clamp(12px,1.5vw,18px) 4px 4px;background:#0b0a08;box-shadow:0 0 0 1px var(--stage-line),0 40px 70px -40px #000}
+.scr{position:relative;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#000}
+.scr video,.ph video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph video{object-position:top}
+.base{width:92%;height:clamp(9px,1.2vw,14px);margin:0 auto;border-radius:2px 2px 16px 16px;background:linear-gradient(#3a352d,#1b1814);box-shadow:0 0 0 1px var(--stage-line)}
+.ph{position:absolute;right:1%;bottom:0;width:clamp(84px,17%,160px);aspect-ratio:9/19.5;padding:clamp(4px,.5vw,6px);border-radius:clamp(16px,2.2vw,28px);background:#22201b;box-shadow:0 0 0 1px var(--stage-line),0 24px 50px -18px #000}
+.ph div{position:relative;width:100%;height:100%;border-radius:clamp(12px,1.8vw,22px);overflow:hidden;background:#000}
+.cap{margin:14px 0 0;text-align:center;color:#a49b8c;font-size:.85rem}
+@media (max-width:640px){.lap,.base{display:none}.sc{display:flex;justify-content:center}.ph{position:relative;right:auto;width:min(62vw,250px);border-radius:32px;padding:7px}.ph div{border-radius:26px}}
+.sec{padding-block:clamp(56px,7vw,96px)}
+.kann{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;list-style:none;margin:28px 0 0;padding:0}
+.kann li{padding:22px;border-radius:18px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);font-weight:600}
+.kann li::before{content:"";display:block;width:28px;height:6px;border-radius:3px;background:var(--dot);margin-bottom:16px}
+.kann + p{margin:20px 0 0;color:var(--ink-2)}
+h2{font-size:clamp(1.9rem,1.2rem + 2.2vw,3rem)}
+.cta{display:grid;grid-template-columns:minmax(0,1.2fr) auto;gap:20px 40px;align-items:center;padding:clamp(26px,4vw,48px);border-radius:28px;background:var(--gold)}
+.cta p{margin:12px 0 0;color:#3a2a0a;max-width:52ch}
+.cta .btns{display:flex;flex-wrap:wrap;gap:10px}
+.cta .btn-d{background:var(--ink);color:var(--paper)}
+.cta .btn-o{box-shadow:inset 0 0 0 1.5px rgb(23 20 15 / .45)}
+.nav2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:clamp(36px,5vw,56px)}
+.nav2 a{display:block;padding:20px 22px;border-radius:18px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);text-decoration:none}
+.nav2 a:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.nav2 small{display:block;color:var(--muted);font-size:.82rem}
+.nav2 b{font-size:1.15rem;letter-spacing:-.02em}
+.nav2 a:last-child{text-align:right}
+.note{margin:28px 0 0;color:var(--muted);font-size:.84rem;max-width:80ch}
+footer{margin-top:clamp(48px,6vw,80px);padding:26px 0 34px;border-top:1px solid var(--line);color:var(--muted);font-size:.86rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px}
+footer nav{display:flex;gap:18px}
+@media (max-width:900px){.head{grid-template-columns:1fr}.kann{grid-template-columns:1fr 1fr}.cta{grid-template-columns:1fr}}
+@media (max-width:520px){.kann,.nav2{grid-template-columns:1fr}.nav2 a:last-child{text-align:left}}
+</style>
+</head>
+<body style="--dot:#e9b44c">
+<header class="top"><div class="wrap">
+  <a class="logo" href="/" aria-label="NUVORA Studio, zur Startseite"><img class="av" src="/assets/brand/nuvora-n-128.webp" alt="" width="40" height="40"><span><b>NUVORA</b><small>STUDIO</small></span></a>
+  <a class="l" href="/#arbeiten">Alle Arbeiten</a>
+  <a class="l" href="/#preise">Preise</a>
+  <a class="btn btn-g" href="/#anfrage">Vorschau anfragen</a>
+</div></header>
+<main class="wrap">
+  <p class="crumb"><a href="/">Start</a> / <a href="/#arbeiten">Arbeiten</a> / Krustenglück Backstube</p>
+  <div class="head">
+    <div><span class="idea"><i></i>Idee: Ofenplan live</span><h1>Krustenglück Backstube</h1></div>
+    <dl class="facts"><dt>Branche</dt><dd>Bäckerei</dd><dt>Art</dt><dd>Demo, Betrieb frei erfunden</dd><dt>Umfang</dt><dd>Design, Texte, Handy-Fassung</dd></dl>
+  </div>
+  <p class="lead">Die Seite kennt die Uhrzeit. Der Ofenplan zeigt, was schon im Regal liegt und was als Nächstes aus dem Ofen kommt. Dazu eine Vorbestellung für den nächsten Morgen, mit Mengen, Summe und Abholzeit.</p>
+  <div class="stage">
+    <div class="sc">
+      <div class="lap"><div class="scr"><video muted playsinline preload="none" data-src="../../assets/show/krustenglueck.mp4" poster="../../assets/show/krustenglueck-p.webp" aria-label="Bildschirmaufnahme der Demo am Computer"></video></div></div>
+      <div class="base" aria-hidden="true"></div>
+      <div class="ph"><div><video muted playsinline preload="none" data-src="../../assets/show/krustenglueck-m.mp4" poster="../../assets/show/krustenglueck-m-p.webp" aria-label="Dieselbe Demo auf dem Handy"></video></div></div>
+    </div>
+    <p class="cap">Aufnahme vom PC und vom Handy</p>
+  </div>
+  <section class="sec" aria-labelledby="h-kann">
+    <h2 id="h-kann">Was die Seite kann</h2>
+    <ul class="kann"><li>Ofenplan mit Live-Uhrzeit</li><li>Vorbestellung mit Mengen und Summe</li><li>Öffnungszeiten, der heutige Tag hervorgehoben</li><li>Sortiment mit Preisen</li></ul>
+    <p>Passt auch für: Bäckereien, Metzgereien, Hofläden, Cafés.</p>
+  </section>
+  <section class="cta" aria-labelledby="h-cta">
+    <div><h2 id="h-cta">So eine Seite für Ihren Betrieb?</h2><p>Ich baue Ihnen eine kostenlose Vorschau mit Ihrem Namen und Ihren Leistungen. Die Idee passe ich an Ihre Branche an. Eine Seite mit eigener Idee wie diese gibt es im Paket Premium ab 1.490 €, einfachere Seiten ab 350 €. Den Festpreis bekommen Sie vorher schriftlich.</p></div>
+    <div class="btns"><a class="btn btn-d" href="https://wa.me/491758939589?text=Hallo%20Jason%2C%20ich%20habe%20die%20Demo%20Krustengl%C3%BCck%20Backstube%20gesehen%20und%20h%C3%A4tte%20gern%20so%20etwas%20f%C3%BCr%20meinen%20Betrieb." rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>Per WhatsApp fragen</a><a class="btn btn-o" href="/#anfrage">Anfrage-Formular</a></div>
+  </section>
+  <nav class="nav2" aria-label="Weitere Arbeiten">
+    <a href="../hellwatt/"><small>Vorige Arbeit</small><b>Hellwatt Elektro &amp; Solar</b></a>
+    <a href="../farbkante/"><small>Nächste Arbeit</small><b>Farbkante Malerwerkstatt</b></a>
+  </nav>
+  <p class="note">Alle Namen, Adressen und Telefonnummern in dieser Demo sind erfunden. Echte Kundenprojekte zeige ich nur mit Zustimmung des Betriebs.</p>
+  <p class="note">Die Fotos dieser Demo sind KI-generiert.</p>
+</main>
+<footer><div class="wrap"><span>© 2026 NUVORA Studio · Webdesign aus Burbach</span><nav aria-label="Rechtliches"><a href="/impressum.html">Impressum</a><a href="/datenschutz.html">Datenschutz</a></nav></div></footer>
+<script>
+(() => {
+  // Videos laufen nur, solange die Bühne zu sehen ist, und hören nach drei Runden auf (Laptop schonen).
+  const st = document.querySelector('.stage'), vids = [...st.querySelectorAll('video')];
+  const ruhig = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let geladen = false, runden = 0;
+  vids.forEach(v => v.addEventListener('ended', () => { if (v === vids[0] && ++runden < 3) vids.forEach(x => { x.currentTime = 0; x.play().catch(() => {}); }); }));
+  new IntersectionObserver(([e]) => {
+    if (ruhig) return;
+    if (e.isIntersecting) {
+      if (!geladen) { vids.forEach(v => { v.src = v.dataset.src; }); geladen = true; }
+      if (runden < 3) vids.forEach(v => v.play().catch(() => {}));
+    } else vids.forEach(v => v.pause());
+  }, { threshold: .3 }).observe(st);
+})();
+</script>
+</body>
+</html>
