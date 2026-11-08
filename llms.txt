@@ -9,6 +9,7 @@
 - WhatsApp: 0175 8939589
 - E-Mail: kontakt.nuvora.studio@gmail.com
 - Website Webdesign: https://web.nuvora-studio.com/
+- Google-Unternehmensprofil: https://maps.google.com/?cid=6314692697040117239
 - Shop (Shopify-Vorlagen und fertige Shops): https://nuvora-studio.com/
 - Einzugsgebiet: Burbach, Neunkirchen, Wilnsdorf, Siegen, Haiger, Dillenburg, Rennerod, Bad Marienberg, Westerburg; deutschlandweit aus der Ferne
 - Zielgruppe: kleine Betriebe, zum Beispiel Handwerker, Werkstätten, Friseure, Praxen, Gastronomie, Läden
@@ -61,4 +62,4 @@
 - [Impressum](https://web.nuvora-studio.com/impressum.html)
 - [Datenschutz](https://web.nuvora-studio.com/datenschutz.html)
 
-Stand: 2026-11-06
+Stand: 2026-11-08
