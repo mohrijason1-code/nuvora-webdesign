@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Webdesign Burbach &amp; Siegerland · Websites ab 350 € | NUVORA Studio</title>
 <meta name="description" content="Webdesign aus Burbach für Betriebe im Siegerland, Westerwald und in Haiger/Dillenburg. Websites ab 350 €, Hosting & Pflege ab 39 € im Monat, Onlineshops. Kostenlose Vorschau vor dem Auftrag.">
-<meta name="theme-color" content="#f5efe4">
+<meta name="theme-color" content="#0b0a0d">
 <link rel="canonical" href="https://web.nuvora-studio.com/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
@@ -20,8 +20,10 @@
 @font-face{font-family:"Bricolage";src:url(assets/fonts/bricolage-latin-wght.woff2) format("woff2");font-weight:200 800;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:"Bricolage";src:url(assets/fonts/bricolage-latin-ext-wght.woff2) format("woff2");font-weight:200 800;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 :root{
-  --paper:#f5efe4; --paper-2:#ebe2d2; --card:#fffcf6; --ink:#17140f; --ink-2:#4f483d; --muted:#776e60; --line:#e1d6c3; --line-2:#cdbfa7;
-  --gold:#f2b84b; --gold-hi:#f7c869; --gold-ink:#8a5d0e; --stage:#100e0b; --stage-2:#1b1814; --stage-line:#34302a; --stage-text:#f4efe6; --stage-muted:#a49b8c;
+  /* Dunkel mit NUVORA-Gold (16.11.2026, vorher hell/Creme) */
+  --paper:#0b0a0d; --paper-2:#121014; --card:#17151a; --ink:#f6f1ea; --ink-2:#cdc4b6; --muted:#9b9285; --line:#2a2630; --line-2:#3d3842;
+  --gold:#f2b84b; --gold-hi:#f7c869; --gold-ink:#f2bd5c; --on-gold:#17140f; --stage:#15120d; --stage-2:#1f1b15; --stage-line:#3a3228; --stage-text:#f4efe6; --stage-muted:#a49b8c;
+  color-scheme:dark;
   --font:"Bricolage","Segoe UI",system-ui,sans-serif; --gutter:clamp(16px,4vw,48px); --max:1280px; --section:clamp(80px,9vw,128px); --r:20px; --ease:cubic-bezier(.16,1,.3,1);
 }
 *,*::before,*::after{box-sizing:border-box}
@@ -64,8 +66,8 @@ h2 em{font-style:normal;color:var(--gold-ink)}
 /* Kopf */
 /* Kopf als schwebende Pille */
 .top{position:sticky;top:0;z-index:40;padding:10px var(--gutter) 0}
-.top .wrap{display:flex;align-items:center;gap:24px;height:64px;max-width:calc(var(--max) - 2 * var(--gutter));padding-inline:14px 8px;border-radius:999px;background:rgb(255 252 246 / .84);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:inset 0 0 0 1px var(--line),0 12px 30px -24px rgb(23 20 15 / .45);transition:background-color .3s,box-shadow .3s}
-.top.solid .wrap{background:rgb(255 252 246 / .95);box-shadow:inset 0 0 0 1px var(--line-2),0 18px 40px -24px rgb(23 20 15 / .5)}
+.top .wrap{display:flex;align-items:center;gap:24px;height:64px;max-width:calc(var(--max) - 2 * var(--gutter));padding-inline:14px 8px;border-radius:999px;background:rgb(23 21 26 / .78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:inset 0 0 0 1px var(--line),0 12px 30px -24px rgb(23 20 15 / .45);transition:background-color .3s,box-shadow .3s}
+.top.solid .wrap{background:rgb(23 21 26 / .94);box-shadow:inset 0 0 0 1px var(--line-2),0 18px 40px -24px rgb(23 20 15 / .5)}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:auto}
 .logo svg{width:38px;height:38px}
 .logo .av{width:38px;height:38px;flex:none;display:block;border-radius:50%;box-shadow:0 0 0 1px rgb(233 184 102 / .55)}
@@ -494,6 +496,30 @@ footer.site{background:var(--paper);padding:56px 0 32px;border-top:1px solid var
 .js .rv{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .js .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}.work .pic,.work .pic img{transition:none}}
+/* Dunkel-Feinschliff: Stellen mit fest eingetragenen Farben */
+::selection{color:var(--on-gold)}
+.btn-g,.menu .btn-g{color:var(--on-gold)}
+.btn-d{background:var(--gold);color:var(--on-gold)}.btn-d:hover{background:var(--gold-hi)}
+.work:hover .go,.price.hl .bonus,.tl-i.is-now .tl-dot span,.tl-i.is-done .tl-dot,.qz button[aria-pressed="true"] .ic,.mini-map .res.me b,.mini-ph .call{color:var(--on-gold)}
+.qz button[aria-pressed="true"] small{color:#4f483d}
+.hero{background:radial-gradient(55% 60% at 78% 38%,rgb(242 184 75 / .11),transparent 70%)}
+.hero h1 em::after{opacity:.3}
+.stage{box-shadow:inset 0 0 0 1px var(--stage-line),0 40px 80px -40px #000}
+.t-d{box-shadow:inset 0 0 0 1px var(--stage-line)}
+.price.hl{box-shadow:inset 0 0 0 1.5px var(--gold),0 30px 70px -40px rgb(242 184 75 / .35)}
+.tl-i.is-now .tl-c{box-shadow:inset 0 0 0 1.5px rgb(242 184 75 / .45),0 34px 60px -38px #000}
+.final{border-top:1px solid var(--stage-line)}
+.mini-ph{background:#000;box-shadow:0 0 0 1px var(--line-2),0 24px 40px -24px #000}
+.mini-ph .scr{color:#17140f}.mini-ph .row{background:#f3efe8}
+.mini-chat{background:var(--paper)}.mini-chat p.me{background:#1f3a24;color:#e8f5e0}
+.mini-st span{color:#7fd497}.mini-st span::before{background:#4fbf6c}
+.mini-req .hd{background:var(--stage-2);color:var(--ink)}
+.f input,.f select,.f textarea{color:#17140f}
+.qz-f input::placeholder{color:#8f8679}
+.qz-err{color:#ff8a7a}
+.tl-i.is-now .tl-dot{background:var(--stage-2)}
+.tl-dot span{background:var(--line-2);color:var(--ink)}
+.qz-f input[aria-invalid=true]{box-shadow:inset 0 0 0 2px #ff7a6a}
 </style>
 </head>
 <body>
